@@ -9,7 +9,7 @@ jobs:
     name: "Test Deployment and Test Runs"
     steps:
       - uses: actions/checkout@v4
-      - uses: Szandor72/devops-center-actions/.github/install-tooling@main
+      - uses: alexandrafanevich/devops-center-actions/.github/install-tooling@main
         with:
           install_sfdx_scanner: false
       - name: "Populate auth file with INTEGRATION_SANDBOX_SFDX_URL secret"
