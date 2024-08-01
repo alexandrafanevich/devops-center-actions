@@ -16,7 +16,7 @@ jobs:
       - name: "Fetch all Files and prepare scan"
         run: |
           git fetch --all
-          node .ci/prepare-scan.js
+          node  --experimental-specifier-resolution=node .ci/prepare-scan.js
       - name: "Populate auth file and log in to Org"
         run: |
           echo ${{ secrets.INTEGRATION_SANDBOX_SFDX_URL}} > ./INTEGRATION_SANDBOX_SFDX_URL.auth
